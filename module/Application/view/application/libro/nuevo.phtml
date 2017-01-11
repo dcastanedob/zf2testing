@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-12">
+		<h1>Nuevo libro</h1>
+		<form name="LibroForm" method="POST" action="/libro/nuevo">
+			<div class="form-group">
+			    <label>Nombre</label>
+			    <?php echo $this->formText($form->get('libro_nombre')) ?>
+
+			    <label>Autor</label>
+			    <?php echo $this->formSelect($form->get('idautor')) ?>
+
+			    <label>Editorial</label>
+			    <?php echo $this->formSelect($form->get('ideditorial')) ?>
+
+			    <input type="submit" value="Guardar" class="btn btn-success">
+			 </div>
+		</form>
+	</div>
+</div>

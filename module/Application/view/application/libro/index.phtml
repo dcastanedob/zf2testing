@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-12">
+		<h1>Libro</h1>
+		<a href="/libro/nuevo">Nuevo</a>
+		<table class="table table-bordered">
+			<thead>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Autor</th>
+				<th>Editorial</th>
+				<th>Opciones</th>
+			</thead>
+			<tbody>
+				<?php foreach($libros as $libro): ?>
+					<tr>
+						<td><?php echo $libro->getIdlibro() ?></td>
+						<td><?php echo $libro->getLibroNombre() ?></td>
+						<td><?php echo $libro->getAutor()->getAutorNombre() ?></td>
+						<td><?php echo $libro->getEditorial()->getEditorialNombre()  ?></td>
+						<td>
+							<a href="/libro/editar/<?php echo $libro->getIdlibro() ?>">Editar</a>
+							<a href="/libro/eliminar/<?php echo $libro->getIdlibro() ?>">Eliminar</a>
+						</td>
+						
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>
+

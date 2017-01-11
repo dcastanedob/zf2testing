@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="col-md-12">
+		<h4>Estas seguro que desea eliminar al autor <b><?php echo $autor->getAutorNombre() ?>?</h4>
+		<form name="AutorForm" method="POST" action="/autor/eliminar/<?php echo $autor->getIdautor() ?>">
+			<div class="form-group">
+			 
+
+			    <input type="submit" value="Eliminar" class="btn btn-danger">
+			 </div>
+		</form>
+	</div>
+</div>

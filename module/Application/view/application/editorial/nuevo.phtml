@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-md-12">
+		<h1>Nueva editorial</h1>
+		<form name="EditoralForm" method="POST" action="/editorial/nuevo">
+			<div class="form-group">
+			    <label>Nombre</label>
+			    <?php echo $this->formText($form->get('editorial_nombre')) ?>
+
+			    <input type="submit" value="Guardar" class="btn btn-success">
+			 </div>
+		</form>
+	</div>
+</div>
